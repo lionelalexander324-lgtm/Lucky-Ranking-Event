@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ff8b72" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="description" content="Lucky Ranking Event — Aug 18 to Aug 21. Daily ranking rewards and Slime Seat Frame gift chances." />
+  <title>Lucky Ranking Event</title>
+  <link rel="preload" as="image" href="assets/banner-v3-720.webp" type="image/webp" fetchpriority="high" imagesrcset="assets/banner-v3-720.webp 720w, assets/banner-v3-1200.webp 1200w" imagesizes="(max-width: 520px) 100vw, 520px" />
+  <style>
+    :root {
+      --bg: #ff9a73;
+      --paper: rgba(255,255,255,.93);
+      --text: #39251f;
+      --muted: #79645e;
+      --coral: #ff6e67;
+      --orange: #ff9f3f;
+      --gold: #f5b51b;
+      --gold-dark: #9c6500;
+      --line: rgba(196, 112, 54, .16);
+      --shadow: 0 12px 30px rgba(112, 64, 35, .11);
+      --radius-xl: 24px;
+      --radius-lg: 19px;
+      --radius-md: 15px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: Inter, ui-rounded, "SF Pro Rounded", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 16% 4%, rgba(255, 225, 112, .76), transparent 25%),
+        radial-gradient(circle at 86% 12%, rgba(255, 116, 136, .62), transparent 27%),
+        radial-gradient(circle at 50% 55%, rgba(255, 205, 92, .35), transparent 34%),
+        linear-gradient(155deg, #ff7f8f 0%, #ff9a72 22%, #ffc25f 45%, #ff9f73 68%, #ff7e92 100%);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+
+    .page {
+      width: min(100%, 520px);
+      margin: 0 auto;
+      padding: 0 14px calc(28px + env(safe-area-inset-bottom));
+    }
+
+    .hero {
+      margin: 0 -14px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #ffb45d, #ff7f86);
+      box-shadow: 0 10px 28px rgba(154, 83, 34, .18);
+    }
+    .hero picture {
+      display: block;
+      width: 100%;
+    }
+    .hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: none;
+      object-fit: contain;
+    }
+
+    .time-card {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      margin: 14px 0 4px;
+      padding: 13px 15px;
+      border: 2px solid rgba(255,255,255,.72);
+      border-radius: 18px;
+      background: linear-gradient(135deg, #ffe96b 0%, #ffc84c 52%, #ffac54 100%);
+      box-shadow: 0 10px 24px rgba(170, 82, 34, .2), inset 0 1px 0 rgba(255,255,255,.7);
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .icon-box {
+      flex: 0 0 44px;
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      font-size: 23px;
+      background: linear-gradient(145deg, #ff775f, #ff5f86);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.45), 0 6px 14px rgba(208,81,69,.22);
+    }
+    .calendar-icon {
+      width: 24px;
+      height: 24px;
+      color: #fff;
+      display: block;
+    }
+
+    .eyebrow {
+      margin: 0 0 2px;
+      font-size: 13px;
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: .02em;
+      color: #a34a24;
+    }
+    .date {
+      margin: 0;
+      font-size: 19px;
+      line-height: 1.25;
+      font-weight: 900;
+      color: #5d2c1e;
+    }
+
+    .section {
+      margin-top: 14px;
+      padding: 18px 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 7px;
+      font-size: 22px;
+      line-height: 1.15;
+      font-weight: 950;
+      letter-spacing: -.02em;
+    }
+
+    .section-lead {
+      margin: 0;
+      color: #5f4a42;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .section-lead strong { color: #db5c34; }
+
+    .ranking-wrap {
+      margin-top: 14px;
+      padding: 8px;
+      border-radius: 19px;
+      background: linear-gradient(135deg, rgba(255,200,85,.18), rgba(255,112,104,.1));
+      border: 1px dashed rgba(211,131,59,.32);
+    }
+    .ranking-wrap picture {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    .ranking-wrap img {
+      display: block;
+      width: min(88%, 410px);
+      height: auto;
+      object-fit: contain;
+      margin: 0 auto;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(83, 66, 58, .12);
+    }
+
+    .rewards-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .reward-card {
+      position: relative;
+      content-visibility: auto;
+      contain-intrinsic-size: 360px;
+      overflow: hidden;
+      border-radius: 20px;
+      padding: 15px;
+      border: 1px solid rgba(193,128,61,.22);
+    }
+    .reward-card::after {
+      content: "";
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      top: -55px;
+      right: -40px;
+      background: rgba(255,255,255,.55);
+      pointer-events: none;
+    }
+    .reward-card.first {
+      background: linear-gradient(135deg, #fff5c9, #fffaf0 55%, #fff0dc);
+      border-color: rgba(236,176,24,.44);
+    }
+    .reward-card.second {
+      background: linear-gradient(135deg, #f5fbff, #ffffff 56%, #fff3eb);
+    }
+    .reward-card.third {
+      background: linear-gradient(135deg, #fff1e7, #fffaf6 60%, #fff7df);
+    }
+
+    .rank-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 7px;
+    }
+    .medal {
+      width: 39px;
+      height: 39px;
+      flex: 0 0 39px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      font-size: 22px;
+      background: rgba(255,255,255,.74);
+      box-shadow: 0 4px 11px rgba(83,50,30,.1);
+    }
+    .rank-title {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 950;
+      line-height: 1.1;
+    }
+    .reward-copy {
+      margin: 0;
+      padding-left: 49px;
+      font-size: 15px;
+      font-weight: 760;
+      line-height: 1.48;
+      color: #4e3b34;
+    }
+
+    .reward-images {
+      margin-top: 12px;
+      display: grid;
+      gap: 10px;
+      justify-content: center;
+    }
+    .reward-images.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .reward-images.one { grid-template-columns: minmax(0, 190px); }
+    .frame-tile {
+      min-height: 128px;
+      display: grid;
+      place-items: center;
+      padding: 9px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(156,111,72,.12);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 7px 18px rgba(82,52,37,.08);
+    }
+    .frame-tile img {
+      width: 100%;
+      height: auto;
+      max-height: 182px;
+      object-fit: contain;
+    }
+
+    .details-list {
+      display: grid;
+      gap: 9px;
+      margin-top: 11px;
+    }
+    .detail-row {
+      display: grid;
+      grid-template-columns: 27px 1fr;
+      align-items: start;
+      gap: 7px;
+      font-size: 15px;
+      line-height: 1.5;
+      font-weight: 720;
+    }
+    .arrow {
+      width: 25px;
+      height: 25px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #fff0dd;
+      color: #e56f30;
+      font-size: 14px;
+      font-weight: 1000;
+    }
+
+    .contact {
+      text-align: center;
+      background: linear-gradient(135deg, #f4fff5, #ffffff 60%, #fff8eb);
+      border-color: rgba(45,177,83,.2);
+    }
+    .contact-title {
+      margin: 0 0 4px;
+      font-size: 21px;
+      font-weight: 950;
+      color: #187b3a;
+    }
+    .contact-copy {
+      margin: 0 0 12px;
+      color: #5c675e;
+      font-size: 14px;
+      line-height: 1.45;
+      font-weight: 650;
+    }
+    .whatsapp {
+      min-height: 50px;
+      width: 100%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      padding: 12px 18px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #29c666, #16a84e);
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 900;
+      box-shadow: 0 8px 18px rgba(29,170,79,.24);
+      transition: transform .2s ease, box-shadow .2s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .whatsapp:active { transform: scale(.985); }
+
+    .footer {
+      padding: 18px 8px 2px;
+      text-align: center;
+      color: #93817a;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity .45s ease, transform .45s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
+    @media (min-width: 700px) {
+      body { padding: 22px 0; }
+      .page { padding-left: 0; padding-right: 0; }
+      .hero { margin: 0; border-radius: 24px 24px 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero" aria-label="Lucky Ranking Event banner">
+      <picture>
+        <source srcset="assets/banner-v3-720.webp 720w, assets/banner-v3-1200.webp 1200w" sizes="(max-width: 520px) 100vw, 520px" type="image/webp" />
+        <img src="assets/banner-v3-1200.png" alt="Lucky Ranking Event — Climb the Lucky Ranking · Win Slime Seat Frame Gifts!" width="1200" height="400" loading="eager" fetchpriority="high" decoding="async" />
+      </picture>
+    </header>
+
+    <section class="time-card reveal" aria-labelledby="event-time-heading">
+      <div class="icon-box" aria-hidden="true">
+        <svg class="calendar-icon" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
+          <path d="M7 2v3M17 2v3M4.5 8.5h15M6 4h12a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 12h2M14 12h2M8 16h2M14 16h2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <p class="eyebrow" id="event-time-heading">Event Time</p>
+        <p class="date">Aug 18th – Aug 21st (4 days)</p>
+      </div>
+    </section>
+
+    <section class="section reveal" aria-labelledby="rewards-heading">
+      <h2 class="section-title" id="rewards-heading"><span aria-hidden="true">🏆</span> Rewards</h2>
+      <p class="section-lead">During the event, rewards are given based on the daily <strong>Lucky Ranking</strong>.</p>
+
+      <div class="ranking-wrap">
+        <picture>
+          <source srcset="assets/lucky-ranking-v3.webp" type="image/webp" />
+          <img src="assets/lucky-ranking-v3.png" alt="Lucky Ranking example screenshot" width="653" height="509" loading="lazy" decoding="async" />
+        </picture>
+      </div>
+
+      <div class="rewards-list">
+        <article class="reward-card first">
+          <div class="rank-line">
+            <div class="medal" aria-hidden="true">🥇</div>
+            <h3 class="rank-title">1st Place</h3>
+          </div>
+          <p class="reward-copy">Rainbow Slime &amp; Crown Slime Seat Frame gift chance (10 days).</p>
+          <div class="reward-images two">
+            <div class="frame-tile">
+              <picture>
+                <source srcset="assets/rainbow-seat-frame-v3.webp" type="image/webp" />
+                <img src="assets/rainbow-seat-frame-v3.png" alt="Rainbow Slime Seat Frame" width="446" height="444" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+            <div class="frame-tile">
+              <picture>
+                <source srcset="assets/crown-seat-frame-v3.webp" type="image/webp" />
+                <img src="assets/crown-seat-frame-v3.png" alt="Crown Slime Seat Frame" width="442" height="446" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+          </div>
+        </article>
+
+        <article class="reward-card second">
+          <div class="rank-line">
+            <div class="medal" aria-hidden="true">🥈</div>
+            <h3 class="rank-title">2nd Place</h3>
+          </div>
+          <p class="reward-copy">Rainbow Slime Seat Frame gift chance (10 days).</p>
+          <div class="reward-images one">
+            <div class="frame-tile">
+              <picture>
+                <source srcset="assets/rainbow-seat-frame-v3.webp" type="image/webp" />
+                <img src="assets/rainbow-seat-frame-v3.png" alt="Rainbow Slime Seat Frame" width="446" height="444" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+          </div>
+        </article>
+
+        <article class="reward-card third">
+          <div class="rank-line">
+            <div class="medal" aria-hidden="true">🥉</div>
+            <h3 class="rank-title">3rd Place</h3>
+          </div>
+          <p class="reward-copy">Crown Slime Seat Frame gift chance (10 days).</p>
+          <div class="reward-images one">
+            <div class="frame-tile">
+              <picture>
+                <source srcset="assets/crown-seat-frame-v3.webp" type="image/webp" />
+                <img src="assets/crown-seat-frame-v3.png" alt="Crown Slime Seat Frame" width="442" height="446" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" aria-labelledby="details-heading">
+      <h2 class="section-title" id="details-heading"><span aria-hidden="true">💎</span> Event Details</h2>
+      <div class="details-list">
+        <div class="detail-row"><span class="arrow" aria-hidden="true">➜</span><span>Top 3 users each day will get rewards.</span></div>
+        <div class="detail-row"><span class="arrow" aria-hidden="true">➜</span><span>Rewards can be sent to yourself or any user ID.</span></div>
+      </div>
+
+
+    </section>
+
+    <section class="section contact reveal" aria-labelledby="questions-heading">
+      <h2 class="contact-title" id="questions-heading">📞 Questions?</h2>
+      <p class="contact-copy"><a class="contact-link" href="https://wa.me/8618646390081" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp at +86 186 4639 0081">WhatsApp: +86 186 4639 0081</a></p>
+    </section>
+
+    <footer class="footer">Mimoon has the final right of interpretation.</footer>
+  </main>
+
+  <script>
+    (() => {
+      const els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(el => el.classList.add('visible'));
+        return;
+      }
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+      els.forEach(el => io.observe(el));
+    })();
+  </script>
+</body>
+</html>
